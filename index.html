@@ -7,9 +7,10 @@
     <title>Từ Minh Khang</title>
 </head>
 <body>
-  
+   <audio autoplay>
+  <source src="./noidoi.mp3" type="audio/mpeg">
  
-
+</audio>
     <div class="item">
         <p>DAYS</p>
         <span id="days">Days</span>
@@ -31,7 +32,7 @@
 </body>
 
 <script>
-    let endDate = new Date("2023,6,30 00:00:00").getTime();
+    let endDate = new Date("2022,6,30 00:00:00").getTime();
     let check = setInterval(function(){
     let now = new Date().getTime();
     let distance = now - endDate;
