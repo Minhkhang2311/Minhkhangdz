@@ -1,1 +1,43 @@
+:root{
+        --bg1 :#9b59b6;
+        --bg2 :#3498db;
+        --text :#26ade4;
+    }
+    {
 
+    padiding: 0;
+    margin:0;
+    box-zizing: border-box
+}
+
+body {
+    background-image: url("");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+     justify-content: center;
+
+}
+.item {
+    margin-right: 20px;
+    height: auto;
+    width: 120px;
+    border: 2px solid var(--text);
+    display: flex;;
+    flex-direction: column-reverse;
+    border-radius: 50%;
+    justify-content: center;
+    color:#fff
+}
+.item span {
+    font-weight: bold;
+    font-size: 32px;
+    margin-top:  12px;
+
+
+      }
