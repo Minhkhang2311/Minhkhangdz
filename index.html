@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Từ Minh Khang</title>
+</head>
+<body>
+  
+ 
 
+    <div class="item">
+        <p>DAYS</p>
+        <span id="days">Days</span>
+    </div>
+    <div class="item">
+        <p>HOURS</p>
+        <span id="hours">Hours</span>
+    </div>
+    <div class="item">
+        <p>MINUTES</p>
+        <span id="minutes">Minutes</span>
+    </div>
+    <div class="item">
+        <p>SECONDS</p>
+        <span id="seconds">Seconds</span>
+    </div>
+
+    
+</body>
+
+<script>
+    let endDate = new Date("2022,4,24 00:00:00").getTime();
+    let check = setInterval(function(){
+    let now = new Date().getTime();
+    let distance = now - endDate;
+    let days = Math.floor(distance / (24*60*60*1000));
+    let hours = Math.floor((distance % (24*60*60*1000)) / (60* 60*1000));
+     let minutes = Math.floor((distance % (60* 60*1000)) / (60*1000));
+    let seconds = Math.floor((distance % (60*1000)) / 1000);
+     document.getElementById('days').innerText = days;
+     document.getElementById('hours').innerText = hours;
+     document.getElementById('minutes').innerText = minutes;
+     document.getElementById('seconds').innerText = seconds;
+     if(distance <= 0){
+    clearInterval(check);
+     }
+     
+    
+ }, 1000);
+    </script>
+
+                                </html>
