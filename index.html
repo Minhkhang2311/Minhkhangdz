@@ -12,20 +12,20 @@
  
 </audio>
     <div class="item">
-        <p>DAYS</p>
-        <span id="days">Days</span>
+        <p>DIEU</p>
+        <span id="dieu">DIEU</span>
     </div>
     <div class="item">
-        <p>HOURS</p>
-        <span id="hours">Hours</span>
+        <p>HUYEN</p>
+        <span id="huyen">HUYEN</span>
     </div>
     <div class="item">
-        <p>MINUTES</p>
-        <span id="minutes">Minutes</span>
+        <p>CUTIII</p>
+        <span id="cutiii">CUTIII</span>
     </div>
     <div class="item">
-        <p>SECONDS</p>
-        <span id="seconds">Seconds</span>
+        <p>S1TG</p>
+        <span id="s1tg">S1TG</span>
     </div>
 
     
@@ -40,10 +40,10 @@
     let hours = Math.floor((distance % (24*60*60*1000)) / (60* 60*1000));
      let minutes = Math.floor((distance % (60* 60*1000)) / (60*1000));
     let seconds = Math.floor((distance % (60*1000)) / 1000);
-     document.getElementById('days').innerText = days;
-     document.getElementById('hours').innerText = hours;
-     document.getElementById('minutes').innerText = minutes;
-     document.getElementById('seconds').innerText = seconds;
+     document.getElementById('DIEU').innerText = dieu;
+     document.getElementById('HUYEN').innerText = huyen;
+     document.getElementById('CITIII').innerText = cutiii;
+     document.getElementById('S1TG').innerText = s1tg;
      if(distance <= 0){
     clearInterval(check);
      }
