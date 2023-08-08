@@ -12,27 +12,27 @@
  
 </audio>
     <div class="item">
-        <p>DIEU</p>
-        <span id="dieu">DIEU</span>
+        <p>Ng</p>
+        <span id="dieu">Ng</span>
     </div>
     <div class="item">
-        <p>HUYEN</p>
-        <span id="huyen">HUYEN</span>
+        <p>Ha</p>
+        <span id="huyen">Ha</span>
     </div>
     <div class="item">
-        <p>CUTIII</p>
-        <span id="cutiii">CUTIII</span>
+        <p>Anh</p>
+        <span id="cutiii">Anh😚</span>
     </div>
     <div class="item">
-        <p>S1TG</p>
-        <span id="s1tg">S1TG</span>
+        <p>Cutii</p>
+        <span id="s1tg">Cutii</span>
     </div>
 
     
 </body>
 
 <script>
-    let endDate = new Date("2008/11/23 00:35:10").getTime();
+    let endDate = new Date("2008/09/17 00:00:10").getTime();
     let check = setInterval(function(){
     let now = new Date().getTime();
     let distance = now - endDate;
@@ -40,10 +40,10 @@
     let hours = Math.floor((distance % (24*60*60*1000)) / (60* 60*1000));
      let minutes = Math.floor((distance % (60* 60*1000)) / (60*1000));
     let seconds = Math.floor((distance % (60*1000)) / 1000);
-     document.getElementById('DIEU').innerText = dieu;
-     document.getElementById('HUYEN').innerText = huyen;
-     document.getElementById('CITIII').innerText = cutiii;
-     document.getElementById('S1TG').innerText = s1tg;
+     document.getElementById('Tu').innerText = Ng;
+     document.getElementById('Minh').innerText = Ha;
+     document.getElementById('Khang').innerText = Anh;
+     document.getElementById('😘').innerText = Cutii;
      if(distance <= 0){
     clearInterval(check);
      }
