@@ -1,37 +1,55 @@
-<div class="lich">
-      <div id="days"></div>
-      <div id="dates"></div>
-      <div id="times"></div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>iu má athw</title>
+</head>
+<body>
+   <audio autoplay>
+  <source src="./noidoi.mp3" type="audio/mpeg">
+ 
+</audio>
+    <div class="item">
+        <p>DAYS</p>
+        <span id="days">Days</span>
+    </div>
+    <div class="item">
+        <p>HOURS</p>
+        <span id="hours">Hours</span>
+    </div>
+    <div class="item">
+        <p>MINUTES</p>
+        <span id="minutes">Minutes</span>
+    </div>
+    <div class="item">
+        <p>SECONDS</p>
+        <span id="seconds">Seconds</span>
+    </div>
 
-<style>
-.lich{
-padding:20px;
-background:#f1f1f1;
-border-radius:10px;
-font-size:30px;
-border:2px solid #999;
-}
-</style>
+    
+</body>
 
 <script>
-window.onload = setInterval(clock,1000);
-function clock()
-{
-var d = new Date();
-var date = d.getDate();
-var month = d.getMonth();
-var montharr =["Tháng 1","Tháng 2","tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","tháng 11","Tháng 12"];
-month=montharr[month];
-var year = d.getFullYear();
-var day = d.getDay();
-var dayarr =["Chủ Nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
-day=dayarr[day];
-var hour =d.getHours();
-var min = d.getMinutes();
-var sec = d.getSeconds();
-document.getElementById("days").innerHTML=day;
-document.getElementById("dates").innerHTML=date+" "+month+" "+year;
-document.getElementById("times").innerHTML=hour+":"+min+":"+sec;
-}
+    let endDate = new Date("2023/11/04 00:00:00").getTime();
+    let check = setInterval(function(){
+    let now = new Date().getTime();
+    let distance = now - endDate;
+    let days = Math.floor(distance / (24*60*60*1000));
+    let hours = Math.floor((distance % (24*60*60*1000)) / (60* 60*1000));
+     let minutes = Math.floor((distance % (60* 60*1000)) / (60*1000));
+    let seconds = Math.floor((distance % (60*1000)) / 1000);
+     document.getElementById('days').innerText = days;
+     document.getElementById('hours').innerText = hours;
+     document.getElementById('minutes').innerText = minutes;
+     document.getElementById('seconds').innerText = seconds;
+     if(distance <= 0){
+    clearInterval(check);
+     }
+     
+    
+ }, 1000);
     </script>
+
+</html>
