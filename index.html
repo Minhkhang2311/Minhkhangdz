@@ -1,42 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Facebook Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-<h1>Welcome to our Facebook services website</h1>
-</header>
-<main>
-<section>
-<h2>Services Offered:</h2>
-<ul>
-<li>Facebook Page Management</li>
-<li>Content Creation</li>
-<li>Advertising Campaigns</li>
-<li>Engagement Strategies</li>
-<li>Analytics and Reporting</li>
-</ul>
-</section>
-<section>
-<h2>Contact Us</h2>
-<p>If you are interested in our services, please fill out the form below:</p>
-<form action="submit.php" method="post">
-<label for="name">Name:</label>
-<input type="text" id="name" name="name" required><br>
-<label for="email">Email:</label>
-<input type="email" id="email" name="email" required><br>
-<label for="message">Message:</label>
-<textarea id="message" name="message" required></textarea><br>
-<button type="submit">Submit</button>
-</form>
-</section>
-</main>
-<footer>
-<p>&copy; 2022 Facebook Services. All rights reserved.</p>
-</footer>
+    <div class="chat-container" id="chat-container">
+        <div class="chat-message incoming">
+            <span class="message">Xin chào! Tôi là Chatbot. Hãy đặt câu hỏi cho tôi.</span>
+        </div>
+    </div>
+    <div class="user-input">
+        <input type="text" id="user-input" placeholder="Nhập câu hỏi của bạn...">
+        <button id="send-button">Gửi</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
